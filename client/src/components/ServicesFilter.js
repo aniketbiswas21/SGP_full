@@ -9,7 +9,7 @@ class ServicesFilter extends Component{
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://localhost:4000/api/issues/?category=Services')
+       const res=await axios.get('/api/issues/?category=Services')
                              //fires up only after the data is fetched
             console.log(res);
             this.setState({

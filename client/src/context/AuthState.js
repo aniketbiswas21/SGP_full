@@ -33,7 +33,7 @@ const AuthState = (props) =>{
         }
 
         try {
-            const res = await axios.get('http://localhost:4000/api/users/me');
+            const res = await axios.get('/api/users/me');
             // console.log(res.data);
             dispatch({
                 type: USER_LOADED, 
@@ -52,7 +52,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.post('http://localhost:4000/api/users', formData, config);
+            const res = await axios.post('/api/users', formData, config);
             // console.log(res.data.token);
             dispatch({
                 type: REGISTER_SUCCESS,
@@ -76,7 +76,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.post('http://localhost:4000/api/auth', formData, config);
+            const res = await axios.post('/api/auth', formData, config);
             // console.log(res.data);
 
             dispatch({
@@ -99,7 +99,7 @@ const AuthState = (props) =>{
             }
         }
         try{
-            const res = await axios.put('http://localhost:4000/api/users/me', formData, config);
+            const res = await axios.put('/api/users/me', formData, config);
             // console.log(res.data.token);
             dispatch({
                 type: UPDATE_SUCCESS,

@@ -9,7 +9,7 @@ class Home extends Component{
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://localhost:4000/api/issues/all')
+       const res=await axios.get('/api/issues/all')
                              //fires up only after the data is fetched
             console.log(res);
             this.setState({

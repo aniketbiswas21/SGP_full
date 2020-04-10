@@ -9,7 +9,7 @@ class OthersFilter extends Component{
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://localhost:4000/api/issues/?category=Others')
+       const res=await axios.get('/api/issues/?category=Others')
                              //fires up only after the data is fetched
             console.log(res);
             this.setState({

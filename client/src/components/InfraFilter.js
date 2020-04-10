@@ -9,7 +9,7 @@ class InfraFilter extends Component{
     }
    async componentDidMount(){
       
-       const res=await axios.get('http://localhost:4000/api/issues/?category=Infrastructure')
+       const res=await axios.get('/api/issues/?category=Infrastructure')
                              //fires up only after the data is fetched
             console.log(res);
             this.setState({
